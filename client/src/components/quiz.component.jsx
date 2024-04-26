@@ -4,18 +4,23 @@ import backgroundImg from "./../images/quizBG.png"
 import doctorImg from "./../images/doctor.png"
 import Nav from './../widgets/nav.compoment'
 import quiz from "./questions"
+import Submit from "./../widgets/submit.compoment"
+
 const Quiz = () => {
     const [Taken, setTaken] = useState(1)
     const [Answers, setAnswers] = useState([])
-      
+      // console.log(Object.keys(quiz).length)
       const handleSelection = (data) => {
-        setAnswers([...Answers, data]);
-        setTaken(Taken+1)
-        console.log(Taken)
-        console.log(Answers)
+        if(Taken != Object.keys(quiz).length + 1){
+          setAnswers([...Answers, data]);
+          setTaken(Taken+1)
+        }
+        // console.log(Taken)
+        // console.log(Answers)
       } 
   return (
   <div>
+    { (Taken + 1  === Object.keys(quiz).length + 1) ? <Submit data={Answers}/> : ""}
     <Nav/>
     <img src={backgroundImg} className={quizStyle.BG} alt="backgroud Image for Quiz" />
     <img src={doctorImg} className={quizStyle.doctorImg} alt="Doctor Image for Quiz" />
