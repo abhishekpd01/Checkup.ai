@@ -65,7 +65,6 @@ const Result = () => {
                 }
                 <span>{data.MedicalAdvice}</span>
                 <br/>
-                <br/>
                 <span><IoWarning /><b>Disclaimer: "This information is provided for informational purposes only and should not be considered a substitute for professional medical advice. Always consult with a healthcare provider regarding any medical concerns or symptoms."</b></span>
             </div>
         </div>
