@@ -1,0 +1,20 @@
+.navDiv{
+    height: 60px;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    flex-wrap: wrap;
+}
+.titleDiv{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+    font-weight: 800;
+}
+.optionsDiv{
+    font-size: 25px;
+    padding: 10px;
+}

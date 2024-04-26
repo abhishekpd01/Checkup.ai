@@ -1,0 +1,45 @@
+.resultDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    z-index: 2;
+}
+.DiseasesDiv{
+    height: 300px;
+    width: 40%;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.DiseasesDiv_Title{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.testsDiv{
+    height: 300px;
+    width: 50%;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.actionsDiv{
+    height: 300px;
+    width: 90%;
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}

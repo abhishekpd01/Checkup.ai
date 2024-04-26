@@ -1,0 +1,75 @@
+.BG{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+}
+.doctorImg{
+    height: 80%;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.quizDiv{
+    position: absolute;
+    left: 10%;
+    top: 15px;
+    height: 70vh;
+    width: 60%;
+    /* background-color: aquamarine; */
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 10px;
+    z-index: 2;
+}
+.questionDiv{
+    background-color: beige;
+    height: 40%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.optionsDiv{
+    margin: 20px 0px;
+    height: 20%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+.optionsDiv:hover{
+    background-color: aquamarine;
+}
+
+.nextDiv{
+    margin: 20px 0px;
+    height: 20%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background-color: antiquewhite;
+    cursor: pointer;
+    width: fit-content;
+    padding: 0px 40px;
+}
+.nextDiv:hover{
+    background-color: aquamarine;
+}
+@media only screen and (max-width: 450px) {
+    .questionDiv{
+        padding: 10px;
+        height: fit-content;
+    }
+    .optionsDiv{
+        height: fit-content;
+    }
+}
