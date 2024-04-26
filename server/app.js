@@ -85,8 +85,8 @@ app.post("/quiz", async function(req, res) {
 
 
 
-app.listen(3000, () => {
-    console.log("The Server is up and running on port 3000.");
+app.listen(4000, () => {
+    console.log("The Server is up and running on port 4000.");
 })
 
 //   I am suffering from the above symptoms, what possible disease can be diagnosed in context of India and suggest some possible actions that could take place, return the response as JSON object having keys diagnosis_possibilities, recommended_actions, medical_advice, disclaimer.
