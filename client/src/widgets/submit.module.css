@@ -1,0 +1,37 @@
+.submitDiv{
+    height: 70vh;
+    width: 80%;
+    background-color: bisque;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.submitButton{
+    height: 100px;
+    width: 70%;
+    background-color: #C40C0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.tryAgain{
+    height: 100px;
+    width: 70%;
+    background-color: #FF6500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 15px;
+}

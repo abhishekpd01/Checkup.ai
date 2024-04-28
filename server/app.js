@@ -5,10 +5,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+var cors = require('cors')
+
 
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 const app  = express();
+app.use(cors())
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -32,7 +35,7 @@ app.post("/quiz", async function(req, res) {
     // For text-only input, use the gemini-pro model
     const model = genAI.getGenerativeModel({ model: "gemini-pro"}, generationConfig);
       
-    const prompt =  req.body+"I am suffering from the above symptoms what possible disease can be diagnosed in context of India and suggest some possible actions that could take place, return the response as JSON object having keys diagnosis_possibilities, recommended_actions, medical_advice, disclaimer.";
+    const prompt =  req.body+"I am suffering from the above symptoms what possible disease can be diagnosed in context of India and suggest some possible actions that could take place, return the response as JSON object having keys diagnosis_possibilities, recommended_actions, medical_advice, diagnostic_tests.";
 
     console.log(prompt);
    
@@ -54,9 +57,10 @@ app.post("/quiz", async function(req, res) {
                 const jsonResponse = JSON.parse(cleanedText); // Use the cleaned text for parsing
 
                 res.status(200).json({
+                    diagnostic_tests: jsonResponse.diagnostic_tests,
                     DiagnosisPossibilities: jsonResponse.diagnosis_possibilities,
                     RecommendedAction: jsonResponse.recommended_actions,
-                    MedicalAdvice: jsonResponse.medical_advice
+                    MedicalAdvice: jsonResponse.medical_advice,
                 });
                 // res.render("quiz", {
                 //     Disclaimer: jsonResponse.disclaimer,
@@ -86,7 +90,11 @@ app.post("/quiz", async function(req, res) {
 
 
 app.listen(4000, () => {
+<<<<<<< HEAD
     console.log("The Server is up and running on port 3000.");
+=======
+    console.log("The Server is up and running on port 4000.");
+>>>>>>> 94afed2250e87094a9b688f81f59bcf92ccc7341
 })
 
 //   I am suffering from the above symptoms, what possible disease can be diagnosed in context of India and suggest some possible actions that could take place, return the response as JSON object having keys diagnosis_possibilities, recommended_actions, medical_advice, disclaimer.

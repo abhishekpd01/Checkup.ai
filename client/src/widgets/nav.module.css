@@ -1,7 +1,7 @@
 .navDiv{
     height: 60px;
     width: 100%;
-    background-color: brown;
+    background-color: #7cada6;
     display: flex;
     flex-wrap: wrap;
 }
